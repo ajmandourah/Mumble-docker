@@ -14,7 +14,7 @@ Docker is required. You can either pull the image using dockers command or clone
 
 ### Using Docker pull
 ```
-docker pull -t mumble ajmandourah/mumble
+docker pull mumble ajmandourah/mumble
 ```
 Create 2 directories (or one if you wish so) of which you want to store your config files in. If you have already a backup copy of either your previous mumble server config file or the sqlite database put it inside the directory you created for mumble otherwise leave it empty. The script will determine if you have a mumble-server.ini file and create one if no file founded. 
 
