@@ -24,8 +24,7 @@ Run the image using the following.
 docker run -i -t -d --name mumble --network host -v YOUR_PATH:/mumble -v YOUR_PATH:/bot/config mumble
 ```
 
-Replace ```YOUR_PATH ``` with your absolute directories path that you have created earlier.
-If you want to customize the ports use the config files instead of tinkering with the -p option in docker line to avoid confusion. 
+Replace ```YOUR_PATH ``` with your absolute directories path that you have created earlier. 
 
 ## Todo
 * create a systemd file for the bot reconnect to the server if something is wrong.
