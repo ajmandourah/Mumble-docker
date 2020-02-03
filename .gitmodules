@@ -1,0 +1,3 @@
+[submodule "botamusique"]
+	path = botamusique
+	url = https://github.com/azlux/botamusique.git
