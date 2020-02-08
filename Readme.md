@@ -12,7 +12,9 @@ Mumble-docker is a Docker image that contains an up to date mumble server in add
 ## Installation
 Docker is required. You can either pull the image using dockers command or clone the repository with the option - - recurse-submodules to clone even the submodules then build the docker image  from scratch.
 
-### Using Docker pull
+### Using Docker
+
+Make sure Docker is installed correctly
 
 Create 2 directories (or one if you wish so) of which you want to store your config files in. If you have already a backup copy of either your previous mumble server config file or the sqlite database put it inside the directory you created for mumble otherwise leave it empty. The script will determine if you have a mumble-server.ini file and create one if no file founded. 
 
@@ -23,6 +25,12 @@ docker run -i -t -d --name mumble --restart always --network host -v YOUR_PATH:/
 ```
 
 Replace ```YOUR_PATH ``` with your absolute directories path that you have created earlier. 
+
+The container will now start automatically on boot.
+
+### Restoring your backup files
+
+If you have already the config files for mumble and the database you can put them in the folder your specefied for the mumble volume above. make sure to change the path for both the log and the sqlite database in the ini file to "/mumble/mumble-server.log" for the log and "/mumble/mumble-server.sqlite" for the database
 
 ## Todo
 * create a systemd file for the bot reconnect to the server if something is wrong.
