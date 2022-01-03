@@ -9,21 +9,11 @@ then
  echo The config file is created in /mumble
 fi
 
-if [ ! -f /bot/config/config.ini ]
-then
- cp /bot/configuration.default.ini /bot/config/config.ini
- echo MusicBot config file created
-fi 
-
 echo Starting mumble server
 chmod -R 777 /mumble
 sed -i 's/^INIFILE=.*/INIFILE=\/mumble\/mumble-server.ini/' /etc/init.d/mumble-server
 service mumble-server start
 echo mumble is started
-chmod -R 777 /bot
-sed -i 's/configuration.default.ini/config\/config.ini/' /bot/mumbleBot.py
-cd /bot && nohup python mumbleBot.py &
-echo music bot is created.
 
 while true
 do 
